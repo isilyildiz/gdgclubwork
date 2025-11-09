@@ -1,16 +1,109 @@
-</html>
 <!doctype html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
-  <title>Merhaba Dünya</title>
+  <title>Hoş Geldiniz | DijitalDolabım</title>
 </head>
-<body>
+<body bgcolor="#ffe6f2" text="#000000">
 
-  <h1>Merhaba Dünya 👋</h1>
-  <p>Giriş başarılı.</p>
 
-  <p><a href="index.html">Çıkış Yap</a></p>
+  <h1><center><font color="#800080">✨ DijitalDolabım ✨</font></center></h1>
+  <hr color="#800080" size="2">
+
+
+  <center>
+    <table border="1" cellpadding="8" bgcolor="#f2f2f2">
+      <tr>
+        <td><a href="welcome.html">Ana Sayfa</a></td>
+        <td><a href="#dolabım">Dolabım</a></td>
+        <td><a href="index.html">Çıkış</a></td>
+      </tr>
+    </table>
+  </center>
+
+  <hr color="#800080" size="2">
+
+
+  <center>
+    <h2><font color="#990099">Hoş Geldiniz!</font></h2>
+    <p>
+      Giriş işleminiz başarılı!<br>
+      Aşağıda kendi <strong>dolabınızı</strong> görüntüleyebilirsiniz.
+    </p>
+  </center>
+
+  <hr color="#800080" size="2">
+
+
+  <h2 id="dolabım"><center><font color="#990099"> ✨Dolabım✨ </font></center></h2>
+
+  <h3><font color="#800080">T-shirtler</font></h3>
+  <center>
+    <table>
+      <tr>
+        <td><img src="tshirt1.jpg" alt="Tshirt 1" width="180" height="180"></td>
+        <td><img src="tshirt2.jpg" alt="Tshirt 2" width="180" height="180"></td>
+        <td><img src="tshirt3.jpg" alt="Tshirt 3" width="180" height="180"></td>
+      </tr>
+    </table>
+  </center>
+
+  <h3><font color="#800080">Pantolonlar</font></h3>
+  <center>
+    <table>
+      <tr>
+        <td><img src="pantolon1.jpg" alt="Pantolon 1" width="180" height="180"></td>
+        <td><img src="pantolon2.jpg" alt="Pantolon 2" width="180" height="180"></td>
+        <td><img src="pantolon3.jpg" alt="Pantolon 3" width="180" height="180"></td>
+      </tr>
+    </table>
+  </center>
+
+  <h3><font color="#800080">Ayakkabılar</font></h3>
+  <center>
+    <table>
+      <tr>
+        <td><img src="ayakkabı1.jpg" alt="Ayakkabı 1" width="180" height="180"></td>
+        <td><img src="ayakkabı2.jpg" alt="Ayakkabı 2" width="180" height="180"></td>
+        <td><img src="ayakkabı3.jpg" alt="Ayakkabı 3" width="180" height="180"></td>
+      </tr>
+    </table>
+  </center>
+
+
+  <hr color="#800080" size="2">
+  <center>
+    <button onclick="kombinOlustur()"> Rastgele Kombin Oluştur</button>
+  </center>
+
+
+  <center>
+    <h3>Oluşturulan Kombin</h3>
+    <div id="kombin"></div>
+  </center>
+
+  <hr color="#800080" size="2">
+  <center>
+    <p><small><font color="#660066">© 2025 DijitalDolabım — Tüm hakları saklıdır.</font></small></p>
+  </center>
+
+
+  <script>
+    function kombinOlustur() {
+      const tshirtler = document.querySelectorAll("h3:nth-of-type(1) + center img");
+      const pantolonlar = document.querySelectorAll("h3:nth-of-type(2) + center img");
+      const ayakkabılar = document.querySelectorAll("h3:nth-of-type(3) + center img");
+
+      const tshirt = tshirtler[Math.floor(Math.random() * tshirtler.length)].src;
+      const pantolon = pantolonlar[Math.floor(Math.random() * pantolonlar.length)].src;
+      const ayakkabı = ayakkabılar[Math.floor(Math.random() * ayakkabılar.length)].src;
+
+      document.getElementById("kombin").innerHTML =
+        "<img src='" + tshirt + "' width='180' , height='180'> " +
+        "<img src='" + pantolon + "' width='180', height='180'> " +
+        "<img src='" + ayakkabı + "' width='180', height='180'>";
+    }
+  </script>
 
 </body>
 </html>

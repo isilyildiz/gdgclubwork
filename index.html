@@ -4,35 +4,44 @@
   <meta charset="utf-8">
   <title>Giriş | DijitalDolabım</title>
 </head>
-<body>
+<body bgcolor="#ffe6f2" text="#000000" link="#800080" vlink="#660066" alink="#cc33cc">
 
-  <h1><center> ✨DijitalDolabım✨ - Login L</center> </h1>
+  <!-- Başlık -->
+  <h1><center><font color="#800080">✨ DijitalDolabım ✨</font></center></h1>
+  <hr color="#800080" size="2">
+
+  <!-- Giriş Formu -->
+  <center>
+    <h2><font color="#990099">Kullanıcı Girişi</font></h2>
     <form action="welcome.html" method="get">
-    <p>
-    <center> <label for="username">Kullanıcı Adı:</label><br>
-      <input id="username" name="username" type="text" placeholder="Kullanıcı Adınız"></center>
-    </p>
+      <table cellpadding="6" bgcolor="#f2f2f2" border="1">
+        <tr>
+          <td><label for="username"><b>Kullanıcı Adı:</b></label></td>
+          <td><input id="username" name="username" type="text" placeholder="Kullanıcı Adınız" ></td>
+        </tr>
+        <tr>
+          <td><label for="password"><b>Şifre:</b></label></td>
+          <td><input id="password" name="password" type="password" placeholder="********" ></td>
+        </tr>
+        <tr>
+          <td><label for="email"><b>Mail Adresiniz:</b></label></td>
+          <td><input id="email" name="email" type="email" placeholder="mail@ornek.com" ></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="submit"><b>Login</b></button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </center>
 
-    <p>
-        <center> <label for="password">Şifre:</label><br>
-      <input id="password" name="password" type="password" placeholder="********"></center>
-     
-    </p>
-
-    <p> 
-        <center> <label for="email" >Mail Adresiniz:</label><br>
-       <input id="email" name="email" type="email" placeholder="Mail Adresiniz"</center>
-      
-    </p>
-
-    <p>
-      <button type="submit">Login</button>
-    </p>
-  </form>
-
-  <hr>
-  <small>®️DijitalDolabım</small>
+  <hr color="#800080" size="2">
+  <center>
+    <small><font color="#660066">© 2025 DijitalDolabım — Tüm hakları saklıdır.</font></small>
+  </center>
 
 </body>
 </html>
+
 
