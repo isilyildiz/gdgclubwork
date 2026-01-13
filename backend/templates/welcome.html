@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Hoş Geldiniz | DijitalDolabım</title>
+</head>
+<body bgcolor="#ffe6f2" text="#000000">
+
+
+  <h1><center><font color="#800080">✨ DijitalDolabım ✨</font></center></h1>
+  <hr color="#800080" size="2">
+
+
+  <center>
+    <table border="1" cellpadding="8" bgcolor="#f2f2f2">
+      <tr>
+        <td><a href="/welcome">Ana Sayfa</a></td>
+        <td><a href="#dolabım">Dolabım</a></td>
+        <td><a href="/">Çıkış</a></td>
+      </tr>
+    </table>
+  </center>
+
+  <hr color="#800080" size="2">
+
+
+  <center>
+    <h2><font color="#990099">Hoş Geldiniz!</font></h2>
+    <p>
+      Giriş işleminiz başarılı!<br>
+      Aşağıda kendi <strong>dolabınızı</strong> görüntüleyebilirsiniz.
+    </p>
+  </center>
+
+  <hr color="#800080" size="2">
+
+
+  <h2 id="dolabım"><center><font color="#990099"> ✨Dolabım✨ </font></center></h2>
+<h3>Eşya Ekle</h3>
+
+<form action="/add-item" method="post" enctype="multipart/form-data">
+  <input type="file" name="image" required><br><br>
+
+  <select name="category" required>
+    <option value="ust">Üst</option>
+    <option value="alt">Alt</option>
+    <option value="ayakkabi">Ayakkabı</option>
+  </select><br><br>
+
+  <button type="submit">Ekle</button>
+</form>
+
+
+<hr>
+<h3>Dolabım</h3>
+
+{% for item in items %}
+  <div style="display:inline-block; margin:15px; text-align:center; border:1px solid #aaa; padding:10px;">
+    
+    <img src="/{{ item['image_path'] }}" width="120"><br><br>
+    <b>{{ item['category'] }}</b><br><br>
+
+    <form action="/delete-item/{{ item['id'] }}" method="post">
+      <button type="submit">Sil</button>
+    </form>
+
+  </div>
+{% endfor %}
+
+
+<form action="/random-combination">
+  <hr color="#800080" size="2">
+  <center> <button type="submit"> Rastgele Kombin Oluştur</button></center>
+  <hr color="#800080" size="2">
+</form>
+
+
+</body>
+</html>
